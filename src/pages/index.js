@@ -34,7 +34,7 @@ const HomePage = () => (
       <div
         css={css`
           width: 60%;
-          max-width: 380px;
+          max-width: 280px;
           position: relative;
           z-index: 2;
           img {
