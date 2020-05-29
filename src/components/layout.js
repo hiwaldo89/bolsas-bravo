@@ -1,9 +1,44 @@
 import React from "react"
+import Header from "./header"
+import Footer from "./footer"
+import { Global, css } from "@emotion/core"
 import "normalize.css/normalize.css"
+import "./layout.scss"
 
 const Layout = ({ children }) => (
   <>
+    <Global
+      styles={css`
+        * {
+          box-sizing: border-box;
+        }
+        body {
+          font-family: "Seravek";
+        }
+        .container {
+          padding: 0 15px;
+          margin: auto;
+          @media (min-width: 992px) {
+            width: 920px;
+          }
+          @media (min-width: 1200px) {
+            width: 1140px;
+          }
+        }
+        .row {
+          margin-left: -15px;
+          margin-right: -15px;
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .bg-green {
+          background-color: #009d4f;
+        }
+      `}
+    />
+    <Header />
     <main>{children}</main>
+    <Footer />
   </>
 )
 

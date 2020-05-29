@@ -1,51 +1,22 @@
 import React from "react"
 import Layout from "../components/layout"
-import Background from "../../src/images/background.jpg"
-import Logo from "../../src/images/logo.svg"
-import { css } from "@emotion/core"
+import Headline from "../components/headline"
+import ProductLine from "../components/productLine"
+import ProductFeatures from "../components/ProductFeatures"
+import Banner from "../components/banner"
+import BannerWithImage from "../components/bannerWithImage"
+import Contact from "../components/contact"
 import SEO from "../components/seo"
 
 const HomePage = () => (
   <Layout>
-    <SEO title="Próximamente" />
-    <div
-      css={css`
-        width: 100%;
-        min-height: 100vh;
-        background-image: url(${Background});
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        &:after {
-          content: "";
-          display: block;
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
-          background-color: rgba(0, 0, 0, 0.5);
-        }
-      `}
-    >
-      <div
-        css={css`
-          width: 60%;
-          max-width: 280px;
-          position: relative;
-          z-index: 2;
-          img {
-            width: 100%;
-            height: auto;
-          }
-        `}
-      >
-        <img src={Logo} alt="Bolsas Bravo" />
-      </div>
-    </div>
+    <SEO title="Inicio" />
+    <Headline />
+    <ProductLine />
+    <ProductFeatures />
+    <Banner />
+    <BannerWithImage />
+    <Contact />
   </Layout>
 )
 
