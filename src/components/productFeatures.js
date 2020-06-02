@@ -49,14 +49,18 @@ const ProductFeatures = () => {
               <div
                 key={`feature-${index}`}
                 css={css`
-                  max-width: 33.3333333%;
-                  flex: 0 0 33.3333333%;
+                  max-width: 100%;
+                  flex: 0 0 100%;
                   padding-left: 15px;
                   padding-right: 15px;
                   display: flex;
                   align-items: center;
                   color: #fff;
                   margin-bottom: 2rem;
+                  @media (min-width: 768px) {
+                    max-width: 33.3333333%;
+                    flex: 0 0 33.3333333%;
+                  }
                 `}
               >
                 <div

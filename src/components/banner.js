@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { css } from "@emotion/core"
-import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
 import Vector from "../images/vector-3.svg"
 
 const Banner = () => {
@@ -21,6 +21,21 @@ const Banner = () => {
       <div
         css={css`
           position: relative;
+          &:after {
+            content: "";
+            display: block;
+            padding-top: 80%;
+            @media (min-width: 768px) {
+              padding-top: 50%;
+            }
+          }
+          .bgImg {
+            position: absolute !important;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
         `}
       >
         <img
@@ -35,7 +50,11 @@ const Banner = () => {
             z-index: 2;
           `}
         />
-        <Img fluid={file.childImageSharp.fluid} />
+        <BackgroundImage
+          fluid={file.childImageSharp.fluid}
+          className="bgImg"
+        ></BackgroundImage>
+        {/* <Img fluid={file.childImageSharp.fluid} /> */}
         <div
           css={css`
             position: absolute;

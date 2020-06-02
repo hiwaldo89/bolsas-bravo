@@ -71,12 +71,24 @@ const Footer = () => {
                   &:nth-of-type(4) {
                     order: 3;
                     text-align: center;
+                    max-width: 100%;
+                    flex: 0 0 100%;
                     @media (min-width: 992px) {
                       text-align: left;
+                      flex: 0 0 20%;
+                      max-width: 20%;
                     }
                   }
                   &:nth-of-type(5) {
                     order: 4;
+                    max-width: 100%;
+                    flex: 0 0 100%;
+                    text-align: center;
+                    @media (min-width: 992px) {
+                      text-align: left;
+                      flex: 0 0 20%;
+                      max-width: 20%;
+                    }
                   }
                   @media (min-width: 992px) {
                     max-width: 20%;

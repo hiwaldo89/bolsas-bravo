@@ -55,7 +55,7 @@ const BannerWithImage = () => {
               height: auto;
               top: 0;
               left: 0;
-              transform: translateY(-100%);
+              transform: translateY(calc(-100% + 1px));
             `}
           />
           <div

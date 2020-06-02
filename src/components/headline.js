@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
 import Vector from "../images/vector1.svg"
 import Vector2 from "../images/vector-2.svg"
 
@@ -26,6 +26,10 @@ const Headline = () => {
         css={css`
           background-color: #009d4f;
           padding-top: 4.5rem;
+          padding-bottom: 3rem;
+          @media (min-width: 768px) {
+            padding-bottom: 0;
+          }
         `}
       >
         <div
@@ -66,6 +70,26 @@ const Headline = () => {
       <div
         css={css`
           position: relative;
+          width: 100%;
+          &:after {
+            content: "";
+            display: block;
+            padding-top: 120%;
+            @media (min-width: 768px) {
+              padding-top: 80%;
+            }
+            @media (min-width: 992px) {
+              padding-top: 60%;
+            }
+          }
+          .bgImg {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            position: absolute !important;
+            top: 0;
+            left: 0%;
+          }
         `}
       >
         <img
@@ -92,7 +116,11 @@ const Headline = () => {
             z-index: 2;
           `}
         />
-        <Img fluid={file.childImageSharp.fluid} alt="Bolsas de basura" />
+        <BackgroundImage
+          Tag={`section`}
+          fluid={file.childImageSharp.fluid}
+          className="bgImg"
+        ></BackgroundImage>
       </div>
     </>
   )
