@@ -1,8 +1,8 @@
 import React from "react"
 import { css } from "@emotion/core"
-import Whatsapp from "../images/whatsapp.svg"
-import Facebook from "../images/facebook.svg"
-import Instagram from "../images/instagram.svg"
+import Whatsapp from "../images/whatsapp-icon.svg"
+import Facebook from "../images/facebook-icon.svg"
+import Instagram from "../images/instagram-icon.svg"
 import Vector from "../images/vector-6.svg"
 
 const Contact = () => {
@@ -82,17 +82,23 @@ const Contact = () => {
                     text-align: right;
                   }
                   a {
-                    margin-left: -10px;
+                    margin-left: 15px;
                   }
                 `}
               >
-                <a href="#" target="_blank">
+                <a href="tel:4426902215">
                   <img src={Whatsapp} alt="whatsapp" />
                 </a>
-                <a href="#" target="_blank">
+                <a
+                  href="https://www.facebook.com/BRAVO-Bolsas-biodegradables-107691267498532"
+                  target="_blank"
+                >
                   <img src={Facebook} alt="facebook" />
                 </a>
-                <a href="#" target="_blank">
+                <a
+                  href="https://www.instagram.com/soluciones.bravo/"
+                  target="_blank"
+                >
                   <img src={Instagram} alt="instagram" />
                 </a>
               </div>

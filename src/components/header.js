@@ -115,13 +115,16 @@ const Header = () => {
                 >
                   <button
                     css={css`
-                      font-family: "poetsen_oneregular";
+                      font-family: "Seravek Medium";
                       color: #fff;
                       text-decoration: none;
                       font-size: 1.5rem;
                       background-color: transparent;
                       border: none;
                       cursor: pointer;
+                      &:focus {
+                        outline: none;
+                      }
                       @media (min-width: 768px) {
                         font-size: 1rem;
                       }

@@ -28,14 +28,17 @@ const ProductLine = () => {
     {
       title: "Bolsa Mediana",
       bullets: ["20 bolsas", "50 x 70 cm", "Capacidad 30 litros"],
+      image: allFile.edges[2].node.childImageSharp.fluid,
     },
     {
       title: "Bolsa Grande",
       bullets: ["15 bolsas", "60 x 90 cm", "Capacidad 53 litros"],
+      image: allFile.edges[0].node.childImageSharp.fluid,
     },
     {
       title: "Bolsa Jumbo",
       bullets: ["10 bolsas", "90 x 1200 cm", "Capidad 160 litros"],
+      image: allFile.edges[1].node.childImageSharp.fluid,
     },
   ]
 
@@ -161,9 +164,7 @@ const ProductLine = () => {
                 <ProductCard key={`product-${productIndex}`}>
                   <div className="product-card__img">
                     <Img
-                      fluid={
-                        allFile.edges[productIndex].node.childImageSharp.fluid
-                      }
+                      fluid={product.image}
                       style={{
                         position: "absolute",
                         width: "100%",

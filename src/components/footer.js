@@ -27,11 +27,14 @@ const Footer = () => {
         >
           <div className="container">
             <div
-              className="row"
               css={css`
+                margin-right: -30px;
+                margin-left: -30px;
+                display: flex;
+                flex-wrap: wrap;
                 .col {
-                  padding-left: 15px;
-                  padding-right: 15px;
+                  padding-left: 30px;
+                  padding-right: 30px;
                   max-width: 50%;
                   flex: 0 0 50%;
                   color: #fff;
@@ -96,7 +99,7 @@ const Footer = () => {
                     margin-bottom: 0;
                   }
                   .col__content {
-                    margin-top: auto;
+                    margin-top: 1em;
                     margin-bottom: auto;
                   }
                   a {
@@ -120,8 +123,8 @@ const Footer = () => {
               >
                 <h3>Salamanca, Gto.</h3>
                 <p>Morelos 919 Col. Centro Salamanca Gto.</p>
-                <a href="">(464) 6480222</a> <br />
-                <a href="">(464) 6470970</a>
+                <a href="tel:4646480222">(464) 6480222</a> <br />
+                <a href="tel:4646470970">(464) 6470970</a>
               </div>
               <div
                 className="col"
@@ -133,7 +136,7 @@ const Footer = () => {
                 <p>
                   Senda del Carruaje 102 local E, Milenio III Querétaro Qro.
                 </p>
-                <a href="">(442) 6902215</a>
+                <a href="tel:4426902215">(442) 6902215</a>
               </div>
               <div
                 className="col"
@@ -176,12 +179,18 @@ const Footer = () => {
                       </a>
                     </li>
                     <li>
-                      <a href="#" target="_blank">
+                      <a
+                        href="https://www.instagram.com/soluciones.bravo/"
+                        target="_blank"
+                      >
                         <img src={Instagram} alt="instagram" />
                       </a>
                     </li>
                     <li>
-                      <a href="#" target="_blank">
+                      <a
+                        href="https://www.facebook.com/BRAVO-Bolsas-biodegradables-107691267498532"
+                        target="_blank"
+                      >
                         <img src={Facebook} alt="facebook" />
                       </a>
                     </li>
@@ -202,7 +211,9 @@ const Footer = () => {
                   Correo
                 </h3>
                 <div className="col__content">
-                  <a href="">hola@solucionesbravo.com</a>
+                  <a href="mailto:hola@solucionesbravo.com">
+                    hola@solucionesbravo.com
+                  </a>
                 </div>
               </div>
             </div>
