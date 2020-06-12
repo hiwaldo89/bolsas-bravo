@@ -12,7 +12,7 @@ const Header = () => {
       <header
         css={css`
           background-color: #009d4f;
-          padding: 1.5rem 0;
+          padding-top: 1.5rem;
         `}
       >
         <div

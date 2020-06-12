@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import Headline from "../components/headline"
+import AboutUs from "../components/aboutUs"
 import ProductLine from "../components/productLine"
 import ProductFeatures from "../components/productFeatures"
 import Banner from "../components/banner"
@@ -12,6 +13,7 @@ const HomePage = () => (
   <Layout>
     <SEO title="Inicio" />
     <Headline />
+    <AboutUs />
     <ProductLine />
     <ProductFeatures />
     <Banner />

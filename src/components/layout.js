@@ -15,6 +15,13 @@ const Layout = ({ children }) => (
         body {
           font-family: "Seravek";
         }
+        button {
+          &,
+          &:active,
+          &focus {
+            outline: none;
+          }
+        }
         .container {
           padding: 0 15px;
           margin: auto;

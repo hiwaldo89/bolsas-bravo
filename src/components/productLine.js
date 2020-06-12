@@ -90,7 +90,8 @@ const ProductLine = () => {
       <div
         id="presentaciones"
         css={css`
-          background-color: #fff;
+          background-color: #000;
+          margin-top: -1px;
         `}
       >
         <div
@@ -101,9 +102,10 @@ const ProductLine = () => {
             h2 {
               color: #ffa400;
               margin-bottom: 3rem;
+              margin-top: 0;
             }
             p {
-              color: #009d4f;
+              color: #fff;
               font-size: 1.2rem;
               line-height: 1.8;
               font-family: "Seravek Medium";

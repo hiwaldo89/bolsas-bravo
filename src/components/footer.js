@@ -25,7 +25,12 @@ const Footer = () => {
             padding-bottom: 3.5rem;
           `}
         >
-          <div className="container">
+          <div
+            className="container"
+            css={css`
+              overflow: hidden;
+            `}
+          >
             <div
               css={css`
                 margin-right: -30px;
