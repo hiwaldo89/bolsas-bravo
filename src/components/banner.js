@@ -48,6 +48,8 @@ const Banner = () => {
             top: 0;
             left: 0;
             z-index: 2;
+            margin-top: -1px;
+            display: block;
           `}
         />
         <BackgroundImage

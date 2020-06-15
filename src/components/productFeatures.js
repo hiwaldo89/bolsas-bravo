@@ -53,21 +53,28 @@ const ProductFeatures = () => {
                   flex: 0 0 100%;
                   padding-left: 15px;
                   padding-right: 15px;
-                  display: flex;
-                  align-items: center;
                   color: #fff;
                   margin-bottom: 2rem;
+                  text-align: center;
                   @media (min-width: 768px) {
                     max-width: 33.3333333%;
                     flex: 0 0 33.3333333%;
+                    display: flex;
+                    align-items: center;
+                    text-align: left;
                   }
                 `}
               >
                 <div
                   css={css`
-                    margin-right: 1.5rem;
                     width: 38px;
                     text-align: center;
+                    margin: auto;
+                    margin-bottom: 0.5rem;
+                    @media (min-width: 768px) {
+                      margin-right: 1.5rem;
+                      margin-bottom: 0;
+                    }
                     img {
                       max-width: 100%;
                     }
@@ -75,7 +82,15 @@ const ProductFeatures = () => {
                 >
                   <img src={feature.icon} alt={feature.text} />
                 </div>
-                <div>{feature.text}</div>
+                <div
+                  css={css`
+                    @media (min-width: 768px) {
+                      width: calc(100% - 38px);
+                    }
+                  `}
+                >
+                  {feature.text}
+                </div>
               </div>
             ))}
           </div>

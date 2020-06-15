@@ -12,7 +12,7 @@ const Header = () => {
       <header
         css={css`
           background-color: #009d4f;
-          padding-top: 1.5rem;
+          padding-top: 2rem;
         `}
       >
         <div
@@ -122,8 +122,12 @@ const Header = () => {
                       background-color: transparent;
                       border: none;
                       cursor: pointer;
+                      transition: all 0.3s ease-in-out;
                       &:focus {
                         outline: none;
+                      }
+                      &:hover {
+                        opacity: 0.7;
                       }
                       @media (min-width: 768px) {
                         font-size: 1rem;

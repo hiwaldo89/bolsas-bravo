@@ -71,13 +71,14 @@ const AboutUs = () => {
             </div>
           </div>
           <div className="row">
-            {values.map(value => (
+            {values.map((value, index) => (
               <div
+                key={`value-${index}`}
                 css={css`
                   width: 100%;
                   flex: 0 0 100%;
-                  padding-left: 15px;
-                  padding-right: 15px;
+                  padding-left: 30px;
+                  padding-right: 30px;
                   @media (min-width: 768px) {
                     width: 25%;
                     flex: 0 0 25%;

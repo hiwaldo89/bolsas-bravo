@@ -90,8 +90,8 @@ const Headline = () => {
                 css={css`
                   width: 100%;
                   flex: 0 0 100%;
-                  padding-left: 15px;
-                  padding-right: 15px;
+                  padding-left: 30px;
+                  padding-right: 30px;
                   margin: auto;
                   padding-bottom: 8rem;
                   padding-top: 3rem;
@@ -109,11 +109,13 @@ const Headline = () => {
                 <p
                   css={css`
                     color: #fff;
+                    margin-top: 4rem;
                     margin-bottom: 2rem;
                     font-size: 1.2rem;
                     font-family: "poetsen_oneregular";
                     @media (min-width: 768px) {
                       font-size: 1.8rem;
+                      margin-top: 0;
                     }
                   `}
                 >
@@ -133,6 +135,11 @@ const Headline = () => {
                     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                     font-family: "Seravek Medium";
                     font-size: 0.8rem;
+                    transform: scale(1);
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                      transform: scale(0.95);
+                    }
                     @media (min-width: 768px) {
                       font-size: 1rem;
                     }

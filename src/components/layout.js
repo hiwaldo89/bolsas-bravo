@@ -23,7 +23,7 @@ const Layout = ({ children }) => (
           }
         }
         .container {
-          padding: 0 15px;
+          padding: 0 30px;
           margin: auto;
           @media (min-width: 992px) {
             width: 920px;

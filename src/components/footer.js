@@ -17,6 +17,7 @@ const Footer = () => {
             width: 100%;
             height: auto;
             display: block;
+            margin-bottom: -1px;
           `}
         />
         <div
@@ -109,6 +110,11 @@ const Footer = () => {
                   }
                   a {
                     color: #fff;
+                    transition: all 0.3s ease-in-out;
+                    text-decoration: none;
+                    &:hover {
+                      opacity: 0.7;
+                    }
                   }
                   h3 {
                     font-family: "Seravek Medium";

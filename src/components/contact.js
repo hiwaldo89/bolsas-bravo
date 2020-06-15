@@ -28,6 +28,7 @@ const Contact = () => {
           css={css`
             background-color: #fff;
             padding-top: 4rem;
+            margin-top: -1px;
           `}
         >
           <div className="container">
@@ -83,6 +84,10 @@ const Contact = () => {
                   }
                   a {
                     margin-left: 15px;
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                      opacity: 0.7;
+                    }
                   }
                 `}
               >
