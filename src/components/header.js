@@ -3,11 +3,11 @@ import { css } from "@emotion/core"
 import { Link } from "gatsby"
 import Logo from "../images/logo-bravo.svg"
 import scrollTo from "gatsby-plugin-smoothscroll"
+import { globalHistory } from "@reach/router"
 
 const Header = () => {
   const [active, setActive] = useState(false)
   const menuOptions = ["Presentaciones", "Características", "Contacto"]
-
   return (
     <>
       <header
@@ -116,7 +116,7 @@ const Header = () => {
                     }
                   `}
                 >
-                  {window.location.pathname === "/" ? (
+                  {globalHistory.location.pathname === "/" ? (
                     <button
                       css={css`
                         font-family: "Seravek Medium";
