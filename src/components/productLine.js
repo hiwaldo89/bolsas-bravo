@@ -167,6 +167,7 @@ const ProductLine = () => {
                 <ProductCard
                   key={`product-${productIndex}`}
                   data-sal="slide-up"
+                  data-sal-duration="150"
                 >
                   <div className="product-card__img">
                     <Img

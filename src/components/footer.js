@@ -10,7 +10,7 @@ import Facebook from "../images/facebook-green.svg"
 const Footer = () => {
   return (
     <>
-      <div data-sal="slide-up">
+      <div>
         <img
           src={Vector}
           alt="vector"
@@ -135,6 +135,7 @@ const Footer = () => {
                 css={css`
                   text-align: center;
                 `}
+                data-sal="slide-up"
               >
                 <h3>Salamanca, Gto.</h3>
                 <p>Morelos 919 Col. Centro Salamanca Gto.</p>
@@ -146,6 +147,7 @@ const Footer = () => {
                 css={css`
                   text-align: center;
                 `}
+                data-sal="slide-up"
               >
                 <h3>Querétaro, Qro.</h3>
                 <p>
@@ -162,10 +164,11 @@ const Footer = () => {
                     margin: auto;
                   }
                 `}
+                data-sal="slide-up"
               >
                 <img src={Logo} alt="Bolsas Bravo" />
               </div>
-              <div className="col">
+              <div className="col" data-sal="slide-up">
                 <h3>Social</h3>
                 <div className="col__content">
                   <ul
@@ -221,6 +224,7 @@ const Footer = () => {
                 css={css`
                   text-align: center;
                 `}
+                data-sal="slide-up"
               >
                 <h3
                   css={css`
