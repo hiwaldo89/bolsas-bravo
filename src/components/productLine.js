@@ -37,7 +37,7 @@ const ProductLine = () => {
     },
     {
       title: "Bolsa Jumbo",
-      bullets: ["10 bolsas", "90 x 1200 cm", "Capidad 160 litros"],
+      bullets: ["10 bolsas", "90 x 120 cm", "Capidad 160 litros"],
       image: allFile.edges[1].node.childImageSharp.fluid,
     },
   ]
@@ -62,7 +62,7 @@ const ProductLine = () => {
       &:after {
         content: "";
         display: block;
-        padding-top: 100%;
+        padding-top: 110%;
         background-color: #fff;
       }
     }
