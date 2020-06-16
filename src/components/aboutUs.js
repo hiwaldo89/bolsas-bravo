@@ -30,6 +30,7 @@ const AboutUs = () => {
       <div
         css={css`
           background-color: #fff;
+          margin-top: -1px;
         `}
       >
         <div

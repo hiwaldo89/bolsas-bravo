@@ -49,8 +49,8 @@ const ProductFeatures = () => {
               <div
                 key={`feature-${index}`}
                 css={css`
-                  max-width: 100%;
-                  flex: 0 0 100%;
+                  max-width: 50%;
+                  flex: 0 0 50%;
                   padding-left: 15px;
                   padding-right: 15px;
                   color: #fff;
