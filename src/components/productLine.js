@@ -111,6 +111,7 @@ const ProductLine = () => {
               font-family: "Seravek Medium";
             }
           `}
+          data-sal="slide-up"
         >
           <div
             css={css`
@@ -163,7 +164,10 @@ const ProductLine = () => {
               `}
             >
               {products.map((product, productIndex) => (
-                <ProductCard key={`product-${productIndex}`}>
+                <ProductCard
+                  key={`product-${productIndex}`}
+                  data-sal="slide-up"
+                >
                   <div className="product-card__img">
                     <Img
                       fluid={product.image}

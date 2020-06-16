@@ -19,6 +19,7 @@ const BannerWithImage = () => {
   return (
     <>
       <div
+        data-sal="slide-up"
         css={css`
           display: flex;
           flex-wrap: wrap;

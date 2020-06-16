@@ -14,6 +14,7 @@ const Contact = () => {
           position: relative;
           margin-top: -3rem;
         `}
+        data-sal="slide-up"
       >
         <img
           src={Vector}

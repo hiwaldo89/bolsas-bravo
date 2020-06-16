@@ -86,6 +86,7 @@ const Banner = () => {
                   width: 50%;
                 }
               `}
+              data-sal="fade"
             >
               Por sus diferentes presentaciones y resistencia son ideales para
               uso doméstico, industrial y escolar.

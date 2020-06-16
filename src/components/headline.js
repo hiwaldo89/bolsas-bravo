@@ -105,6 +105,7 @@ const Headline = () => {
                     flex: 0 0 60%;
                   }
                 `}
+                data-sal="slide-up"
               >
                 <p
                   css={css`

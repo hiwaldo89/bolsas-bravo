@@ -1,6 +1,7 @@
 import React from "react"
 import Vector from "../images/vector-5.svg"
 import { css } from "@emotion/core"
+import { Link } from "gatsby"
 import Logo from "../images/logo.svg"
 import Whatsapp from "../images/whatsapp-green.svg"
 import Instagram from "../images/instagram-green.svg"
@@ -9,7 +10,7 @@ import Facebook from "../images/facebook-green.svg"
 const Footer = () => {
   return (
     <>
-      <div>
+      <div data-sal="slide-up">
         <img
           src={Vector}
           alt="vector"
@@ -20,16 +21,12 @@ const Footer = () => {
             margin-bottom: -1px;
           `}
         />
-        <div
-          className="bg-green"
-          css={css`
-            padding-bottom: 3.5rem;
-          `}
-        >
+        <div className="bg-green">
           <div
             className="container"
             css={css`
               overflow: hidden;
+              padding-bottom: 3.5rem;
             `}
           >
             <div
@@ -48,13 +45,13 @@ const Footer = () => {
                   flex-direction: column;
                   margin-bottom: 3rem;
                   &:first-of-type {
-                    order: 1;
+                    order: 3;
                     @media (min-width: 992px) {
                       order: 0;
                     }
                   }
                   &:nth-of-type(2) {
-                    order: 2;
+                    order: 4;
                     @media (min-width: 992px) {
                       order: 1;
                     }
@@ -78,22 +75,29 @@ const Footer = () => {
                     }
                   }
                   &:nth-of-type(4) {
-                    order: 3;
+                    order: 1;
                     text-align: center;
                     max-width: 100%;
                     flex: 0 0 100%;
                     @media (min-width: 992px) {
+                      order: 2;
                       text-align: left;
                       flex: 0 0 20%;
                       max-width: 20%;
                     }
                   }
                   &:nth-of-type(5) {
-                    order: 4;
+                    order: 2;
                     max-width: 100%;
                     flex: 0 0 100%;
                     text-align: center;
+                    h3 {
+                      display: none;
+                    }
                     @media (min-width: 992px) {
+                      h3 {
+                        display: block;
+                      }
                       text-align: left;
                       flex: 0 0 20%;
                       max-width: 20%;
@@ -177,6 +181,10 @@ const Footer = () => {
                       }
                       li {
                         margin-right: 15px;
+                        margin-left: 15px;
+                        @media (min-width: 992px) {
+                          margin-left: 0;
+                        }
                       }
                       img {
                         width: 35px;
@@ -227,6 +235,36 @@ const Footer = () => {
                   </a>
                 </div>
               </div>
+            </div>
+          </div>
+          <div
+            css={css`
+              background-color: rgba(0, 0, 0, 0.2);
+            `}
+          >
+            <div
+              className="container"
+              css={css`
+                text-align: center;
+                padding: 0.5rem;
+                &,
+                a {
+                  color: #fff;
+                  text-decoration: none;
+                }
+                a {
+                  transition: all 0.3s ease-in-out;
+                  &:hover {
+                    opacity: 0.7;
+                  }
+                }
+                span {
+                  margin: 0 1rem;
+                }
+              `}
+            >
+              Bolsas Bravo <span>|</span>{" "}
+              <Link to="/aviso-de-privacidad">Aviso de privacidad</Link>
             </div>
           </div>
         </div>

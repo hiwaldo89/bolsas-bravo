@@ -58,6 +58,7 @@ const AboutUs = () => {
                 margin: auto;
                 margin-bottom: 3.5rem;
               `}
+              data-sal="slide-up"
             >
               <p>
                 Somos una empresa especializada en la fabricación de bolsas para
@@ -84,6 +85,8 @@ const AboutUs = () => {
                     flex: 0 0 25%;
                   }
                 `}
+                data-sal="slide-up"
+                data-sal-delay={index * 300}
               >
                 <h3>{value.title}</h3>
                 <p>{value.text}</p>

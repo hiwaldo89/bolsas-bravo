@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { css } from "@emotion/core"
+import { Link } from "gatsby"
 import Logo from "../images/logo-bravo.svg"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
@@ -39,7 +40,9 @@ const Header = () => {
             `}
           >
             <h1>Bolsas Bravo</h1>
-            <img src={Logo} alt="Bolsas Bravo" />
+            <Link to="/">
+              <img src={Logo} alt="Bolsas Bravo" />
+            </Link>
           </div>
           <button
             className={`hamburger hamburger--collapse${
@@ -113,38 +116,68 @@ const Header = () => {
                     }
                   `}
                 >
-                  <button
-                    css={css`
-                      font-family: "Seravek Medium";
-                      color: #fff;
-                      text-decoration: none;
-                      font-size: 1.5rem;
-                      background-color: transparent;
-                      border: none;
-                      cursor: pointer;
-                      transition: all 0.3s ease-in-out;
-                      &:focus {
-                        outline: none;
-                      }
-                      &:hover {
-                        opacity: 0.7;
-                      }
-                      @media (min-width: 768px) {
-                        font-size: 1rem;
-                      }
-                    `}
-                    onClick={() => {
-                      scrollTo(
-                        `#${option
-                          .toLowerCase()
-                          .normalize("NFD")
-                          .replace(/[\u0300-\u036f]/g, "")}`
-                      )
-                      setActive(false)
-                    }}
-                  >
-                    {option}
-                  </button>
+                  {window.location.pathname === "/" ? (
+                    <button
+                      css={css`
+                        font-family: "Seravek Medium";
+                        color: #fff;
+                        text-decoration: none;
+                        font-size: 1.5rem;
+                        background-color: transparent;
+                        border: none;
+                        cursor: pointer;
+                        transition: all 0.3s ease-in-out;
+                        &:focus {
+                          outline: none;
+                        }
+                        &:hover {
+                          opacity: 0.7;
+                        }
+                        @media (min-width: 768px) {
+                          font-size: 1rem;
+                        }
+                      `}
+                      onClick={() => {
+                        scrollTo(
+                          `#${option
+                            .toLowerCase()
+                            .normalize("NFD")
+                            .replace(/[\u0300-\u036f]/g, "")}`
+                        )
+                        setActive(false)
+                      }}
+                    >
+                      {option}
+                    </button>
+                  ) : (
+                    <Link
+                      to={`/#${option
+                        .toLowerCase()
+                        .normalize("NFD")
+                        .replace(/[\u0300-\u036f]/g, "")}`}
+                      css={css`
+                        font-family: "Seravek Medium";
+                        color: #fff;
+                        text-decoration: none;
+                        font-size: 1.5rem;
+                        background-color: transparent;
+                        border: none;
+                        cursor: pointer;
+                        transition: all 0.3s ease-in-out;
+                        &:focus {
+                          outline: none;
+                        }
+                        &:hover {
+                          opacity: 0.7;
+                        }
+                        @media (min-width: 768px) {
+                          font-size: 1rem;
+                        }
+                      `}
+                    >
+                      {option}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
