@@ -11,6 +11,7 @@ const ProductLine = () => {
         edges {
           node {
             id
+            name
             childImageSharp {
               fluid(maxWidth: 900) {
                 ...GatsbyImageSharpFluid
@@ -22,23 +23,24 @@ const ProductLine = () => {
     }
   `)
 
-  console.log(allFile)
-
   const products = [
     {
       title: "Bolsa Mediana",
       bullets: ["30 bolsas", "50 x 70 cm", "Capacidad 30 litros"],
-      image: allFile.edges[1].node.childImageSharp.fluid,
+      image: allFile.edges.filter(edge => edge.node.name === "mediana")[0].node
+        .childImageSharp.fluid,
     },
     {
       title: "Bolsa Grande",
       bullets: ["15 bolsas", "60 x 90 cm", "Capacidad 53 litros"],
-      image: allFile.edges[0].node.childImageSharp.fluid,
+      image: allFile.edges.filter(edge => edge.node.name === "grande")[0].node
+        .childImageSharp.fluid,
     },
     {
       title: "Bolsa Jumbo",
       bullets: ["10 bolsas", "90 x 120 cm", "Capidad 160 litros"],
-      image: allFile.edges[2].node.childImageSharp.fluid,
+      image: allFile.edges.filter(edge => edge.node.name === "jumbo")[0].node
+        .childImageSharp.fluid,
     },
   ]
 
