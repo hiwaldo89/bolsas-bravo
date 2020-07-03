@@ -27,8 +27,8 @@ const ProductLine = () => {
   const products = [
     {
       title: "Bolsa Mediana",
-      bullets: ["20 bolsas", "50 x 70 cm", "Capacidad 30 litros"],
-      image: allFile.edges[2].node.childImageSharp.fluid,
+      bullets: ["30 bolsas", "50 x 70 cm", "Capacidad 30 litros"],
+      image: allFile.edges[1].node.childImageSharp.fluid,
     },
     {
       title: "Bolsa Grande",
@@ -38,7 +38,7 @@ const ProductLine = () => {
     {
       title: "Bolsa Jumbo",
       bullets: ["10 bolsas", "90 x 120 cm", "Capidad 160 litros"],
-      image: allFile.edges[1].node.childImageSharp.fluid,
+      image: allFile.edges[2].node.childImageSharp.fluid,
     },
   ]
 
